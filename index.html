@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <style>
+          body{  
+  background-image:linear-gradient(115deg, rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)), url('https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg') ;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+  color: white;
+  font-family: Poppins;
+}
+main{
+ text-align:center;
+}
+
+header{
+  margin: auto;
+  font-weight: 100;
+}
+
+section{
+  background: #1b1b32;
+  max-width: 40%;
+  margin:auto;
+  margin-top: 30px;
+}
+#survey-form{
+  max-width: auto;
+  padding: 5%;
+  text-align: left;
+}
+.div_class{
+  margin-top: 20px;   
+}
+
+[type='text'], select, [type='email'], [type='number'], button, textarea{
+  border-radius: 5px;
+  font-family: inherit;  
+}
+
+[type='text'], [type='number'], [type='email']
+{
+  width: 95%;
+  max-width: 100%; 
+  
+}
+[type='text'], [type='number'], [type='email'], select, textarea {
+  margin: 10px 0 25px 0;  
+  padding:1em;  
+  color: black;
+}
+select{
+  width: 100%;   
+}
+
+[type='radio'], [type='checkbox'] {
+  margin: 10px 10px 10px 0; 
+}
+
+textarea{
+  width: 95%;  
+  height: 200px;
+  margin-top: 10px; 
+}
+
+button{
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0 20px 0;
+  background: #37AF65;  
+  color: inherit;
+  border: 0;
+}
+
+select{
+    height: 3.5em !important;  
+  }
+
+@media screen and (max-width: 800px)
+{ 
+  section {
+    max-width:100%;
+    padding-right: 5%;
+  }  
+  
+}  
+
+
+/* Specifically for Ipad */
+@media (min-width: 800px) and (max-width: 1000px){ 
+
+      #name, #email, #age, textarea{
+        max-width: 92%;
+      }
+}
+
+
+      </style>
+  </head>
+  
+  <body>
+  <main>
+  <header>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description"><em>Thank you for taking the time to help us improve the platform</em></p>
+  </header>
+  
+  <section>    
+    <form id ="survey-form">
+      <div class="div_class">
+          <label for="name">Name</label><br>
+          <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="div_class">
+          <label for="email">Email</label><br>
+          <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="div_class">
+          <label for="age">Age (optional)</label><br>
+          <input type="number" id="age" placeholder="Enter your age" min=10 max=99 >
+      </div>
+      <div class="div_class">
+          <label for="dropdown">Which option best describes your current role?</label><br>
+          <select name="dropdown" id="dropdown">
+            <option value=""> Select an option</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="no_answer">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select><br>
+      </div>
+      <div class="div_class">
+          <label for="recommendation">Would you recommend freeCodeCamp to a friend?</label><br>
+          <input type="radio" id="rbn_definitely" checked value="definitely" name ="recommendation"><label for="rbn_definitely">Definitely</label><br>
+          <input type="radio" id="rbn_maybe" value="maybe" name ="recommendation"><label for="rbn_maybe" >Maybe</label><br>
+          <input type="radio" id="rbn_notsure" value="not_sure" name ="recommendation"><label for="rbn_notsure">Not sure</label>
+      </div>
+      <div class="div_class">
+        <label for="fav_feature">What is your favorite feature of freeCodeCamp?</label>
+        <select name="fav_feature">
+          <option value="">Select an option</option>
+          <option value="challenges">Challenges</option>
+          <option value="projects">Projects</option>
+          <option value="community">Community</option>
+          <option value="opensource">Open Source</option>
+        </select>
+      </div>
+      <div class="div_class">
+        <label for="checklist">What would you like to see improved? (Check all that apply)</label><br>
+        <input type="checkbox" name="checklist" id="chkFrontend" value="frontend"><label for="chkFrontend">Front-end Projects</label><br>
+        <input type="checkbox" name="checklist" id="chkBackend" value="backend"><label for="chkBackend" >Back-end Projects</label><br>
+         <input type="checkbox" name="checklist" id="chkData" value="data"><label for="chkData">Data Visualization</label><br>
+         <input type="checkbox" name="checklist" id="chkChallenges" value="challenges"><label for="chkChallenges">Challenges</label><br>
+         <input type="checkbox" name="checklist" id="chkOpenSource" value="opensource"><label for="chkOpenSource">Open Source Community</label><br>
+         <input type="checkbox" name="checklist" id="chkGitter" value="gitter"><label for="chkGitter">Gitter help rooms</label><br>
+         <input type="checkbox" name="checklist" id="chkVideos" value="videos"><label for="chkVideos">Videos</label><br>
+         <input type="checkbox" name="checklist" id="chkCityMeetups" value="citymeetups"><label for="chkCityMeetups">City Meetups</label><br>
+         <input type="checkbox" name="checklist" id="chkWiki" value="wiki"><label for="chkWiki">Wiki</label><br>
+         <input type="checkbox" name="checklist" id="chkForum" value="forum"><label for="chkForum">Forum</label><br>
+         <input type="checkbox" name="checklist" id="chkAdditionalCourses" value="additionalcourses"><label for="chkAdditionalCourses">Additional Courses</label><br>
+     </div>
+     <div class="div_class">
+       <label for="txtComments">Any comments or suggestions?</label><br>
+       <textarea id= "txtComments" placeholder="Enter your comment here..."></textarea>
+      </div>
+      <div class="div_class"><button type="submit"  value="Submit">Submit</button></div>
+    </form>
+  </section>
+  
+</main>
+  
+  </body>
+</html>
